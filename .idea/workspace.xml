@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e028264c-4119-4eba-a8e8-ad326cb5b23b" name="Changes" comment="6/3/2024">
+      <change afterPath="$PROJECT_DIR$/exported-to-dos.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/allTasksDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/allTasksDatabase.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/pages/CreateTaskPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/pages/CreateTaskPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/pages/EditTaskPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/pages/EditTaskPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/pages/TasksListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/pages/TasksListPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/utils/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,18 +35,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "tonikirillov07"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;tonikirillov07&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/tonikirillov07/ToDo.git",
-    "accountId": "27d0f378-e3fc-4a78-a3a2-0c7f3c837619"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/tonikirillov07/ToDo.git&quot;,
+    &quot;accountId&quot;: &quot;27d0f378-e3fc-4a78-a3a2-0c7f3c837619&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -67,7 +73,11 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/toniw/IdeaProjects/ToDo/src/main/java/com/ds/todo/utils"
+    "last_opened_file_path": "C:/Users/toniw/IdeaProjects/ToDo/src/main/java/com/ds/todo/utils",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -154,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717412143673</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="6/3/2024">
+      <option name="closed" value="true" />
+      <created>1717419434089</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717419434089</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

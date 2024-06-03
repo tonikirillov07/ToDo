@@ -88,7 +88,7 @@ public final class Utils {
     public static @NotNull List<String> getTimesList(){
         List<String> timesList = new ArrayList<>();
 
-        for (int i = 1; i < 24; i++) {
+        for (int i = 8; i < 24; i++) {
             String hour = (i < 10 ? "0" + i : String.valueOf(i));
             timesList.add(hour + ":00");
 

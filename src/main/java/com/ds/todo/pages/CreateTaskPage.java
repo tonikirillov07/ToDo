@@ -7,10 +7,14 @@ import com.ds.todo.extendsNodes.ExtendedTextField;
 import com.ds.todo.utils.Utils;
 import com.ds.todo.utils.dialogs.ErrorDialog;
 import javafx.geometry.Insets;
+import javafx.scene.Cursor;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 
+import java.awt.*;
 import java.time.LocalDate;
 import java.util.List;
 

@@ -56,7 +56,7 @@ public class EditTaskPage extends Page{
 
     private void createApplyButton() {
         ExtendedButton applyButton = initBackButton(0d);
-        applyButton.setText("Anwenden");
+        applyButton.setText("Speichern");
         VBox.setMargin(applyButton, new Insets(6d, 0, 18d, 0d));
 
         applyButton.addAction(this::onApplyButtonAction);

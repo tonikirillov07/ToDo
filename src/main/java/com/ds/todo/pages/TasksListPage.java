@@ -10,15 +10,23 @@ import com.ds.todo.task.TasksUpdater;
 import com.ds.todo.utils.Utils;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.Cursor;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import org.jetbrains.annotations.NotNull;
 
+import java.awt.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
+
+import static com.ds.todo.utils.Utils.createLabel;
 
 public class TasksListPage extends Page{
     private final TasksUpdater tasksUpdater;
@@ -37,6 +45,7 @@ public class TasksListPage extends Page{
         createScrollPane();
         createAddTaskButton();
         createClearTasksButton();
+        createExportLabelButton();
     }
 
     private void createScrollPane() {
@@ -115,5 +124,46 @@ public class TasksListPage extends Page{
         VBox.setMargin(label, new Insets(35d, 0d, 35d, 0d));
 
         contentVbox.getChildren().add(label);
+    }
+
+    private void createExportLabelButton(){
+        Label exportLabelButton = createLabel("Aufgaben exportieren");
+        exportLabelButton.setTextFill(Color.LIGHTGRAY);
+        exportLabelButton.setUnderline(true);
+        exportLabelButton.setCursor(Cursor.HAND);
+
+        exportLabelButton.setOnMouseEntered(mouseEvent -> exportLabelButton.setOpacity(0.5d));
+        exportLabelButton.setOnMouseExited(mouseEvent -> exportLabelButton.setOpacity(1d));
+        VBox.setMargin(exportLabelButton, new Insets(15d, 0, 10, 0d));
+
+        addNodeToTile(exportLabelButton);
+
+        List<Task> allTasks = DatabaseService.getAllTasks();
+
+        assert allTasks != null;
+        exportLabelButton.setDisable(allTasks.isEmpty());
+        Utils.addActionToNode(exportLabelButton, () -> exportAll(allTasks));
+    }
+
+    private void exportAll(@NotNull List<Task> taskList){
+        try {
+            File file = new File("exported-to-dos.txt");
+            if(file.exists())
+                file.delete();
+
+            file.createNewFile();
+
+            for (Task task : taskList) {
+                try {
+                    FileWriter fileWriter = new FileWriter(file, true);
+                    fileWriter.write("\n\n" + task.getId() + ". " + task.getTaskName() + " (" + task.getTaskTime() + ")\n" + task.getTaskDescription());
+                    fileWriter.close();
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }
