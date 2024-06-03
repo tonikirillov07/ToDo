@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e028264c-4119-4eba-a8e8-ad326cb5b23b" name="Changes" comment="6/3/2024">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDo.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +29,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "tonikirillov07"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/tonikirillov07/ToDo.git",
+    "accountId": "27d0f378-e3fc-4a78-a3a2-0c7f3c837619"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -53,6 +65,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/toniw/IdeaProjects/ToDo/src/main/java/com/ds/todo/utils"
   }
@@ -125,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717411704725</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="6/3/2024">
+      <option name="closed" value="true" />
+      <created>1717411727283</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717411727283</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
