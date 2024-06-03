@@ -5,13 +5,16 @@ import com.ds.todo.Main;
 import com.ds.todo.database.DatabaseService;
 import com.ds.todo.extendsNodes.ExtendedButton;
 import com.ds.todo.extendsNodes.ExtendedTextField;
+import com.ds.todo.task.Task;
 import com.ds.todo.task.TaskParser;
 import com.ds.todo.utils.Utils;
+import com.ds.todo.utils.dialogs.ErrorDialog;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
+import java.util.List;
 import java.util.Objects;
 
 import static com.ds.todo.database.DatabaseConstants.*;
@@ -49,6 +52,7 @@ public class EditTaskPage extends Page{
 
     private void createIsDoneCheckBox() {
         isDoneCheckBox = new CheckBox("");
+        isDoneCheckBox.setSelected(DatabaseService.getBoolean(Objects.requireNonNull(DatabaseService.getValue(TASK_IS_DONE_ROW, Long.parseLong(taskId)))));
         addHboxWithDescriptionAndNode("Erledigt: ", isDoneCheckBox, this);
 
         isDoneCheckBox.setOnAction(actionEvent -> DatabaseService.changeValue(TASK_IS_DONE_ROW, String.valueOf(isDoneCheckBox.isSelected()), Long.parseLong(taskId)));
@@ -65,6 +69,7 @@ public class EditTaskPage extends Page{
 
     private void onApplyButtonAction() {
         long taskIdLong = Long.parseLong(taskId);
+        String previousTime = DatabaseService.getValue(TASK_TIME_ROW, taskIdLong);
 
         if(!extendedTextFieldNewTaskName.getText().isEmpty())
             DatabaseService.changeValue(TASK_NAME_ROW, extendedTextFieldNewTaskName.getText(), taskIdLong);
@@ -84,6 +89,25 @@ public class EditTaskPage extends Page{
 
         if(newDatePicker.getValue() != null & newTimeComboBox.getValue() != null){
             DatabaseService.changeValue(TASK_TIME_ROW, presentLocalDateInNormalView(newDatePicker.getValue()) + " " + newTimeComboBox.getValue(), taskIdLong);
+        }
+
+        String newTime = DatabaseService.getValue(TASK_TIME_ROW, taskIdLong);
+
+        boolean hasTaskAtSomeTime = false;
+        List<Task> taskList = DatabaseService.getAllTasks();
+
+        assert taskList != null;
+        for (Task task : taskList) {
+            if(task.getTaskTime().equals(newTime) & task.getId() != taskIdLong){
+                hasTaskAtSomeTime = true;
+                break;
+            }
+        }
+
+        if(hasTaskAtSomeTime){
+            ErrorDialog.show(new IllegalArgumentException("Zu diesem Zeitpunkt gibt es bereits Aufgaben"));
+            DatabaseService.changeValue(TASK_TIME_ROW, previousTime, taskIdLong);
+            return;
         }
 
         goToPreviousPage();

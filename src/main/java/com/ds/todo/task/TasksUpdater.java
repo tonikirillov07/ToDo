@@ -14,7 +14,7 @@ public class TasksUpdater {
         new Thread(() -> {
             while (isTimeCanBeUpdated){
                 tasks.forEach(task -> {
-                    if(TaskParser.isTaskTimeCame(task.getTaskTime()) & task.isCanSendNotification()){
+                    if(TaskParser.isTaskTimeCame(task.getTaskTime()) & task.isCanSendNotification() & !task.isDone()){
                         NotificationsSender.send("Sie haben für diese Zeit ein Geschäft geplant", task.getTaskName(), TrayIcon.MessageType.INFO);
                         task.setCanSendNotification(false);
                     }

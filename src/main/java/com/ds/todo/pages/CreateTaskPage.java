@@ -7,14 +7,10 @@ import com.ds.todo.extendsNodes.ExtendedTextField;
 import com.ds.todo.utils.Utils;
 import com.ds.todo.utils.dialogs.ErrorDialog;
 import javafx.geometry.Insets;
-import javafx.scene.Cursor;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
 
-import java.awt.*;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -76,6 +72,22 @@ public class CreateTaskPage extends Page{
 
         LocalDate localDate = datePicker.getValue();
         String time = Utils.presentLocalDateInNormalView(localDate) + " " + timeComboBox.getValue();
+
+        List<Task> allTasks = DatabaseService.getAllTasks();
+        boolean hasTaskAtSomeTime = false;
+
+        assert allTasks != null;
+        for (Task task : allTasks) {
+            if(task.getTaskTime().equals(time)){
+                ErrorDialog.show(new IllegalArgumentException("Zu diesem Zeitpunkt gibt es bereits Aufgaben"));
+                hasTaskAtSomeTime = true;
+
+                break;
+            }
+        }
+
+        if(hasTaskAtSomeTime)
+            return;
 
         Task task = new Task(time, extendedTextFieldTaskName.getText(), extendedTextFieldTaskDescription.getText(), false);
         DatabaseService.addTask(task);
