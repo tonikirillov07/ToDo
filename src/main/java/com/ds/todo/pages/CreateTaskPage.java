@@ -79,7 +79,7 @@ public class CreateTaskPage extends Page{
         assert allTasks != null;
         for (Task task : allTasks) {
             if(task.getTaskTime().equals(time)){
-                ErrorDialog.show(new IllegalArgumentException("Zu diesem Zeitpunkt gibt es bereits Aufgaben"));
+                ErrorDialog.show(new IllegalArgumentException("Es gibt bereits zu tun"));
                 hasTaskAtSomeTime = true;
 
                 break;

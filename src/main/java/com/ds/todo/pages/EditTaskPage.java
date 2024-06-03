@@ -105,7 +105,7 @@ public class EditTaskPage extends Page{
         }
 
         if(hasTaskAtSomeTime){
-            ErrorDialog.show(new IllegalArgumentException("Zu diesem Zeitpunkt gibt es bereits Aufgaben"));
+            ErrorDialog.show(new IllegalArgumentException("Es gibt bereits zu tun"));
             DatabaseService.changeValue(TASK_TIME_ROW, previousTime, taskIdLong);
             return;
         }

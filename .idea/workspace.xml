@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e028264c-4119-4eba-a8e8-ad326cb5b23b" name="Changes" comment="6/3/2024">
       <change afterPath="$PROJECT_DIR$/exported-to-dos.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/allTasksDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/allTasksDatabase.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/pages/CreateTaskPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/pages/CreateTaskPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/pages/EditTaskPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/pages/EditTaskPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/task/TasksUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/task/TasksUpdater.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717423739778</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="6/3/2024">
+      <option name="closed" value="true" />
+      <created>1717426466695</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717426466695</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
