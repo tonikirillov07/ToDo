@@ -15,13 +15,6 @@ import static com.ds.todo.Constants.WINDOW_TITLE;
 import static javafx.scene.paint.Color.TRANSPARENT;
 
 public class Main extends Application {
-    /*
-    TODO: Разработка ToDo-приложение на Java с использованием Eclipse IDE
-     c подвязанной базой данных, которое позволит пользователям планировать свое время:
-     создавая, просматривая, редактируя и удаляя задачи. З основных момента: добавлять данные
-     (записи о делах и встречах), экспортировать данные и проверка на свободное время.
-     */
-
     @Override
     public void start(@NotNull Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("main-view.fxml"));

@@ -5,69 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e028264c-4119-4eba-a8e8-ad326cb5b23b" name="Changes" comment="6/3/2024">
-      <change afterPath="$PROJECT_DIR$/ToDo.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/database/allTasksDatabase.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/libs/sqlite-jdbc-3.40.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/Animations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/database/DatabaseConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/database/DatabaseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/extendsNodes/ExtendedButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/extendsNodes/ExtendedTextField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/extendsNodes/TaskTile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/extendsNodes/Tile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/pages/CreateTaskPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/pages/EditTaskPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/pages/Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/pages/TasksListPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/task/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/task/TaskParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/task/TasksUpdater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/utils/NotificationsSender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/utils/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/utils/actionListeners/IOnAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/com/ds/todo/utils/dialogs/ErrorDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/resources/com/ds/todo/fonts/Inter-BoldItalic.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/resources/com/ds/todo/fonts/Inter-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/resources/com/ds/todo/images/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/resources/com/ds/todo/images/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/resources/com/ds/todo/images/icon/window_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/resources/com/ds/todo/images/minimize.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/resources/com/ds/todo/images/taskDescription.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/resources/com/ds/todo/images/taskName.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/resources/com/ds/todo/main-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ToDo/src/main/resources/com/ds/todo/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/pages/EditTaskPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/task/TaskParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/task/TasksUpdater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/utils/NotificationsSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/allTasksDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/allTasksDatabase.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/task/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/database/DatabaseConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/database/DatabaseConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/database/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/database/DatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/extendsNodes/TaskTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/extendsNodes/TaskTile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/pages/CreateTaskPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/pages/CreateTaskPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/pages/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/pages/Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/pages/TasksListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/pages/TasksListPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ds/todo/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ds/todo/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ds/todo/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ds/todo/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717393128751</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="6/3/2024">
+      <option name="closed" value="true" />
+      <created>1717411704725</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717411704725</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
