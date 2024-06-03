@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$/../../src/main"/>
+	<lib name="sqlite-jdbc-3.40.0.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/sqlite-jdbc-3.40.0.0.jar!/"/>
+	</lib>
+	<levels>
+		<level name="Gradle: org.openjfx:javafx-fxml:win:19.0.2" value="project"/>
+		<level name="Gradle: org.openjfx:javafx-controls:19.0.2" value="project"/>
+		<level name="Gradle: org.openjfx:javafx-controls:win:19.0.2" value="project"/>
+		<level name="Gradle: org.openjfx:javafx-graphics:19.0.2" value="project"/>
+		<level name="Gradle: org.openjfx:javafx-graphics:win:19.0.2" value="project"/>
+		<level name="Gradle: org.openjfx:javafx-base:19.0.2" value="project"/>
+		<level name="Gradle: org.openjfx:javafx-base:win:19.0.2" value="project"/>
+		<level name="Gradle: org.jetbrains:annotations:24.0.0" value="project"/>
+	</levels>
+</component>
