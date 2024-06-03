@@ -76,6 +76,11 @@ public class TaskTile extends HBox {
         getChildren().add(hBox);
     }
 
+    public void markAsDone(){
+        setOpacity(0.5d);
+        setStyle("-fx-border-color: rgb(3, 129, 0);");
+    }
+
     public String getTaskId() {
         return id;
     }

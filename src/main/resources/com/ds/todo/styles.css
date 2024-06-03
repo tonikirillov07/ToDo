@@ -111,3 +111,32 @@
 .task-tile: hover{
     -fx-border-color: #5B59C5;
 }
+
+.check-box {
+    selected-box-color: #141414;
+    box-color: white;
+    mark-color: white;
+    -fx-cursor: hand;
+}
+
+.check-box:selected > .box {
+    -fx-background-color: white;
+}
+
+.check-box > .box {
+    -fx-background-color: #5b5fc7;
+}
+
+.check-box:selected > .box > .mark,
+.check-box:indeterminate  > .box > .mark {
+    -fx-background-color: #444791;
+}
+
+.check-box: hover{
+	-fx-underline: true;
+}
+
+.date-picker{
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}

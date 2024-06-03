@@ -2,7 +2,6 @@ package com.ds.todo.pages;
 
 import com.ds.todo.extendsNodes.ExtendedButton;
 import com.ds.todo.extendsNodes.Tile;
-import com.ds.todo.utils.actionListeners.IOnAction;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -46,11 +45,13 @@ public abstract class Page {
         addNodeToPage(vBox);
     }
 
-    public void initBackButton(double topMargin) {
+    public ExtendedButton initBackButton(double topMargin) {
         ExtendedButton backButton = new ExtendedButton("Zurück", ExtendedButton.DEFAULT_WIDTH, ExtendedButton.DEFAULT_HEIGHT);
         backButton.addAction(this::goToPreviousPage);
         VBox.setMargin(backButton, new Insets(topMargin, 40d, 30d, 40d));
         addNodeToTile(backButton);
+
+        return backButton;
     }
 
     public void goToPreviousPage(){
@@ -58,6 +59,11 @@ public abstract class Page {
             close();
             previousPage.open();
         }
+    }
+
+    public void reopen(){
+        close();
+        open();
     }
 
     public void addNodeToPage(Node node){

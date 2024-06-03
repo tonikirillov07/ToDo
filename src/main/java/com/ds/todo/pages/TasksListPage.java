@@ -2,11 +2,12 @@ package com.ds.todo.pages;
 
 import com.ds.todo.Constants;
 import com.ds.todo.Main;
-import com.ds.todo.Task;
+import com.ds.todo.task.Task;
 import com.ds.todo.database.DatabaseService;
 import com.ds.todo.extendsNodes.ExtendedButton;
 import com.ds.todo.extendsNodes.TaskTile;
-import com.ds.todo.utils.actionListeners.IOnAction;
+import com.ds.todo.task.TasksUpdater;
+import com.ds.todo.utils.Utils;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -20,8 +21,12 @@ import java.util.List;
 import java.util.Objects;
 
 public class TasksListPage extends Page{
+    private final TasksUpdater tasksUpdater;
+
     public TasksListPage(Page previousPage, VBox mainContentVbox, String title) {
         super(previousPage, mainContentVbox, title);
+
+        tasksUpdater = new TasksUpdater();
     }
 
     @Override
@@ -59,8 +64,18 @@ public class TasksListPage extends Page{
             return;
         }
 
+        tasksUpdater.start(allTasks);
+
         allTasks.forEach(task -> {
             TaskTile taskTile = new TaskTile(TaskTile.DEFAULT_WIDTH, TaskTile.DEFAULT_HEIGHT, String.valueOf(task.getId()), task.getTaskName(), task.getTaskTime(), task.getTaskDescription());
+            if(task.isDone())
+                taskTile.markAsDone();
+
+            Utils.addActionToNode(taskTile, () -> {
+                EditTaskPage editTaskPage = new EditTaskPage(this, getMainContentVbox(), "Aufgabe bearbeiten", taskTile.getTaskId(), taskTile.getName(), taskTile.getDescription(), task.getTaskTime());
+                editTaskPage.open();
+            });
+
             contentVbox.getChildren().add(taskTile);
         });
     }
@@ -71,16 +86,25 @@ public class TasksListPage extends Page{
         addNodeToTile(addTaskExtendedButton);
 
         addTaskExtendedButton.addAction(() -> {
-            CreateTaskPage createTaskPage = new CreateTaskPage(this, getMainContentVbox(), "Erstellen einer Aufgabe");
+            CreateTaskPage createTaskPage = new CreateTaskPage(this, getMainContentVbox(), "Aufgabe erstellen");
             createTaskPage.open();
         });
     }
 
     private void createClearTasksButton() {
-        ExtendedButton clearTasksExtendedButton = new ExtendedButton("Reinigen", ExtendedButton.DEFAULT_WIDTH, ExtendedButton.DEFAULT_HEIGHT);
+        ExtendedButton clearTasksExtendedButton = new ExtendedButton("Alle Aufgaben löschen", ExtendedButton.DEFAULT_WIDTH, ExtendedButton.DEFAULT_HEIGHT);
         clearTasksExtendedButton.setStyle("-fx-background-color: rgb(187, 71, 71);");
         VBox.setMargin(clearTasksExtendedButton, new Insets(10d, 0d, 25d, 0d));
         addNodeToTile(clearTasksExtendedButton);
+
+        clearTasksExtendedButton.addAction(() -> {
+            DatabaseService.deleteAllTasks();
+            tasksUpdater.stop();
+
+            reopen();
+        });
+
+        clearTasksExtendedButton.setDisable(Objects.requireNonNull(DatabaseService.getAllTasks()).isEmpty());
     }
 
     private void createNoTasksLabel(@NotNull VBox contentVbox){

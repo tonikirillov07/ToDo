@@ -1,6 +1,7 @@
 package com.ds.todo.database;
 
-import com.ds.todo.Task;
+import com.ds.todo.task.Task;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.sql.Connection;
@@ -64,12 +65,16 @@ public class DatabaseService {
             String delete = "DELETE FROM " + TABLE_NAME + " WHERE " + ID_ROW + "='" + id + "'";
 
             PreparedStatement preparedStatement = Objects.requireNonNull(getConnection()).prepareStatement(delete);
-            int result = preparedStatement.executeUpdate();
+            preparedStatement.executeUpdate();
 
             preparedStatement.close();
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    public static boolean getBoolean(@NotNull String value){
+        return value.equals("1") | value.equals("true") | value.equals("yes");
     }
 
     public static boolean addTask(Task task){
@@ -96,12 +101,13 @@ public class DatabaseService {
         try {
             List<Task> allTasks = new ArrayList<>();
 
-            String getAll = "SELECT * FROM " + TABLE_NAME;
+            String getAll = "SELECT * FROM " + TABLE_NAME + " ORDER BY " + ID_ROW + " ASC";
             PreparedStatement preparedStatement = Objects.requireNonNull(getConnection()).prepareStatement(getAll);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while(resultSet.next()){
-                allTasks.add(new Task(Long.parseLong(resultSet.getString(ID_ROW)), resultSet.getString(TASK_NAME_ROW), resultSet.getString(TASK_TIME_ROW), resultSet.getString(TASK_DESCRIPTION_ROW)));
+                allTasks.add(new Task(Long.parseLong(resultSet.getString(ID_ROW)), resultSet.getString(TASK_NAME_ROW), resultSet.getString(TASK_TIME_ROW), resultSet.getString(TASK_DESCRIPTION_ROW),
+                        getBoolean(resultSet.getString(TASK_IS_DONE_ROW))));
             }
 
             resultSet.close();
@@ -113,5 +119,31 @@ public class DatabaseService {
         }
 
         return null;
+    }
+
+    public static void deleteAllTasks(){
+        try{
+            String deleteAll = "DELETE FROM " + TABLE_NAME;
+            PreparedStatement preparedStatement = Objects.requireNonNull(getConnection()).prepareStatement(deleteAll);
+            preparedStatement.executeUpdate();
+
+            preparedStatement.close();
+
+            resetAutoincrement();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    private static void resetAutoincrement(){
+        try {
+            String resetAI = "DELETE FROM sqlite_sequence WHERE name='" + TABLE_NAME + "'";
+            PreparedStatement preparedStatement = Objects.requireNonNull(getConnection()).prepareStatement(resetAI);
+            preparedStatement.executeUpdate();
+
+            preparedStatement.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

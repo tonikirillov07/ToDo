@@ -13,8 +13,7 @@ import javafx.stage.Stage;
 
 import java.util.Objects;
 
-import static com.ds.todo.Constants.START_WINDOW_HEIGHT;
-import static com.ds.todo.Constants.START_WINDOW_WIDTH;
+import static com.ds.todo.Constants.*;
 import static com.ds.todo.utils.Utils.addActionToNode;
 
 public class MainController {
@@ -50,7 +49,7 @@ public class MainController {
     }
 
     private void initHeader() {
-        titleLabel.setText("To-do-Anwendung");
+        titleLabel.setText(WINDOW_TITLE);
         titleLabel.setFont(Font.loadFont(Main.class.getResourceAsStream(Constants.INTER_EXTRA_BOLD_FONT_INPUT_PATH), 16d));
 
         initControlButtons();
